@@ -37,17 +37,15 @@ while playing:
 
     if player_rect.right >= WIDTH:
         player_speed[0] = -player_speed[0]
+
+    if player_rect.top < 0:
+        player_speed[1] = -player_speed[1]
+
+    if player_rect.left < 0:
+        player_speed[0] = -player_speed[0]
     
     main_display.blit(player, player_rect)
 
     player_rect = player_rect.move(player_speed)
-
-    if player_rect.top <= 0:
-        player_speed[1] = -player_speed[1]
-
-    if player_rect.left <= 0:
-        player_speed[0] = -player_speed[0]
-
-
 
     pygame.display.flip()
