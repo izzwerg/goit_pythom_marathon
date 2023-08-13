@@ -1,3 +1,5 @@
+# pip install pygame
+
 import random
 import os
 import pygame
