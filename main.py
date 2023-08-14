@@ -52,7 +52,7 @@ def create_bonus():
     bonus_size = (90, 150)
     bonus = pygame.transform.scale(pygame.image.load('bonus.png').convert_alpha(), (90, 150)) 
     bonus_rect = pygame.Rect(random.randint(0 + bonus_size[0], WIDTH - bonus_size[0]), 0, *bonus_size)
-    bonus_move = [0, random.randint(4, 8)]
+    bonus_move = [0, random.randint(2, 6)]
     return [bonus, bonus_rect, bonus_move]
 
 CREATE_BONUS = pygame.USEREVENT + 2
