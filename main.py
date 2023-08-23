@@ -101,6 +101,7 @@ while playing:
         main_display.blit(enemy[0], enemy[1])
 
         if player_rect.colliderect(enemy[1]):
+            print("Your score:", score)
             playing = False
 
     for bonus in bonuses:
